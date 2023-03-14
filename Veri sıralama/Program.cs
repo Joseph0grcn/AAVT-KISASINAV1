@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickSort_enbuyuksayi
+namespace Veri_sıralama
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
             int[] arr = new int[10000];
             Random rnd = new Random();
 
@@ -18,31 +17,17 @@ namespace QuickSort_enbuyuksayi
             {
                 arr[i] = Convert.ToInt32(100000 * rnd.NextDouble());
             }
-            /*for (int i = 0; i < arr.Length; i++)//kontrol etmek için kullandım açılması bir şeyi etkilemiyor
+
+            QuickSort(arr, 0,arr.Length-1);
+
+            for (int i = 0; i < arr.Length; i++)//kontrol etmek için kullandım açılması bir şeyi etkilemiyor
             {
                 Console.WriteLine(arr[i] + "--" + i);
-            }*/
-
-            //aynı değeri verip vermediğini kontrol etmek için aşağıdaki yorum alanını açınız
-
-            /* int bigNum = 0, numIndex = 0;
-              for (int i = 0; i < arr.Length; i++)//BruteForce ile bütün diziyi bir kez dolaşıyoruz
-            {
-                if (arr[i] > bigNum)//indexte olduğumuz eleman bigNum sayısından büyükse parantez içine giriyoruz
-                {
-                    bigNum = arr[i];//bigNum'ı dizideki sayıya eşitliyoruz
-                    numIndex = i;//numIndex'i sayının dizi index'ine eşitliyoruz
-                }
             }
-            Console.WriteLine("en Büyük sayi = " + bigNum);
-            Console.WriteLine("en Büyük sayi index = " + numIndex);*/
 
-            QuickSort(arr, 0, arr.Length - 1);
-
-            Console.WriteLine("en Büyük sayi = " + arr[arr.Length-1]);
-            Console.WriteLine("en Büyük sayi index = " +((arr.Length)-1));
-            Console.ReadKey();
+            Console.ReadLine();
         }
+
         public static void QuickSort(int[] array, int left, int right)
         {
             if (left < right)
@@ -92,6 +77,5 @@ namespace QuickSort_enbuyuksayi
                 }
             }
         }
-
     }
 }

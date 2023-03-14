@@ -18,7 +18,7 @@ namespace enbuyuksayi
             {
                 arr[i] = Convert.ToInt32( 100000*rnd.NextDouble());
             }
-            /*for (int i = 0; i < arr.Length; i++)--kontrol etmek için kullandım açılması bir şeyi etkilemiyor
+            /*for (int i = 0; i < arr.Length; i++)//kontrol etmek için kullandım açılması bir şeyi etkilemiyor
             {
                 Console.WriteLine(arr[i] + "--" + i);
             }*/
